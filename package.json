@@ -1,0 +1,106 @@
+{
+  "name": "ortho-revision",
+  "productName": "Ortho Revision",
+  "version": "1.6.1",
+  "description": "Application d'aide aux révisions des cours d'orthophonie (fiches, flashcards, QCM) propulsée par Gemini.",
+  "author": "Shanel",
+  "license": "MIT",
+  "main": "electron/main.cjs",
+  "updateRepo": "alesspinna06-sys/ortho-revision",
+  "scripts": {
+    "dev": "concurrently -k -n VITE,ELECTRON -c magenta,cyan \"vite\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "web": "vite",
+    "build": "vite build",
+    "start": "vite build && electron .",
+    "dist:mac": "vite build && electron-builder --mac",
+    "dist:win": "vite build && electron-builder --win",
+    "dist": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "^5.0.0",
+    "@fontsource/caveat": "^5.0.8",
+    "@fontsource/comic-neue": "^5.0.0",
+    "@fontsource/kalam": "^5.0.8",
+    "@fontsource/patrick-hand": "^5.0.0",
+    "@fontsource/shantell-sans": "^5.0.0",
+    "electron-updater": "^6.3.9",
+    "jszip": "^3.10.1",
+    "mammoth": "^1.8.0",
+    "pdfjs-dist": "4.10.38",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "32.3.3",
+    "electron-builder": "^25.1.8",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "fr.shanel.orthorevision",
+    "productName": "Ortho Revision",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "mac": {
+      "category": "public.app-category.education",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "minimumSystemVersion": "10.15",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "artifactName": "${productName}-${version}-mac-${arch}.${ext}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Ortho Révision"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "alesspinna06-sys",
+        "repo": "ortho-revision",
+        "releaseType": "release"
+      }
+    ]
+  }
+}
