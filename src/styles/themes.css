@@ -1,0 +1,114 @@
+/* =====================================================================
+   Palettes de couleurs (attribut data-palette sur <html>, en plus de data-theme)
+   Fichier commun aux deux logiciels. Chaque palette ne change que des variables.
+   ===================================================================== */
+/* ---------- Clairs ---------- */
+:root[data-palette='lavande'] {
+  --bg: #f5f2fc; --bg-elev: #ffffff; --glass-strong: rgba(255, 255, 255, .7); --modal-bg: rgba(255, 255, 255, .94);
+  --accent: #8b5cf6; --accent-2: #ec4899; --accent-grad: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #ec4899 100%);
+  --chip: rgba(109, 40, 217, .06); --stroke: rgba(76, 29, 149, .08); --stroke-strong: rgba(76, 29, 149, .15);
+  --blob-1: rgba(167, 139, 250, .26); --blob-2: rgba(244, 114, 182, .18); --blob-3: rgba(196, 181, 253, .2);
+  --text-2: #5d5677; --primary-bg: #2e1065;
+}
+:root[data-palette='sauge'] {
+  --bg: #eff5f0; --bg-elev: #ffffff; --glass-strong: rgba(255, 255, 255, .7); --modal-bg: rgba(255, 255, 255, .94);
+  --accent: #0f9f6e; --accent-2: #0ea5a4; --accent-grad: linear-gradient(135deg, #34d399 0%, #10b981 45%, #0e7490 100%);
+  --chip: rgba(6, 78, 59, .06); --stroke: rgba(6, 78, 59, .08); --stroke-strong: rgba(6, 78, 59, .15);
+  --blob-1: rgba(52, 211, 153, .22); --blob-2: rgba(132, 204, 22, .14); --blob-3: rgba(45, 212, 191, .18);
+  --text-2: #4f6359; --primary-bg: #064e3b;
+}
+:root[data-palette='peche'] {
+  --bg: #fcf3ec; --bg-elev: #fffdfb; --glass-strong: rgba(255, 253, 250, .72); --modal-bg: rgba(255, 252, 248, .95);
+  --accent: #ea6a2f; --accent-2: #f43f5e; --accent-grad: linear-gradient(135deg, #fb923c 0%, #f97316 45%, #f43f5e 100%);
+  --chip: rgba(154, 52, 18, .06); --stroke: rgba(124, 45, 18, .08); --stroke-strong: rgba(124, 45, 18, .15);
+  --blob-1: rgba(251, 146, 60, .24); --blob-2: rgba(251, 113, 133, .18); --blob-3: rgba(253, 224, 71, .18);
+  --text-2: #6b5548; --primary-bg: #431407;
+}
+/* ---------- Sombres ---------- */
+:root[data-palette='ocean'] {
+  --bg: #071520; --bg-elev: #0b1d2b; --glass: rgba(148, 214, 255, .05); --glass-strong: rgba(10, 30, 44, .66); --modal-bg: rgba(11, 30, 45, .93); --glass-solid: #0d2232;
+  --glass-hover: rgba(148, 214, 255, .09); --chip: rgba(148, 214, 255, .08); --stroke: rgba(148, 214, 255, .1); --stroke-strong: rgba(148, 214, 255, .18);
+  --accent: #22b8e6; --accent-2: #2dd4bf; --accent-grad: linear-gradient(135deg, #2dd4bf 0%, #0ea5e9 50%, #3b82f6 100%);
+  --blob-1: rgba(14, 165, 233, .26); --blob-2: rgba(45, 212, 191, .16); --blob-3: rgba(59, 130, 246, .18);
+  --text-2: #9db7c9; --text-3: #63809a; --primary-bg: #e0f2fe; --primary-text: #062033;
+}
+:root[data-palette='foret'] {
+  --bg: #0a140f; --bg-elev: #0f1d16; --glass: rgba(167, 243, 208, .045); --glass-strong: rgba(13, 28, 20, .66); --modal-bg: rgba(14, 30, 22, .93); --glass-solid: #11241a;
+  --glass-hover: rgba(167, 243, 208, .08); --chip: rgba(167, 243, 208, .07); --stroke: rgba(167, 243, 208, .09); --stroke-strong: rgba(167, 243, 208, .17);
+  --accent: #34c77b; --accent-2: #a3e635; --accent-grad: linear-gradient(135deg, #a3e635 0%, #22c55e 50%, #0d9488 100%);
+  --blob-1: rgba(34, 197, 94, .2); --blob-2: rgba(163, 230, 53, .12); --blob-3: rgba(13, 148, 136, .16);
+  --text-2: #a2bcae; --text-3: #6a8576; --primary-bg: #dcfce7; --primary-text: #052e16;
+}
+:root[data-palette='aurore'] {
+  --bg: #150c17; --bg-elev: #1d1120; --glass: rgba(255, 200, 230, .05); --glass-strong: rgba(30, 16, 32, .66); --modal-bg: rgba(31, 17, 34, .93); --glass-solid: #241426;
+  --glass-hover: rgba(255, 200, 230, .085); --chip: rgba(255, 200, 230, .075); --stroke: rgba(255, 200, 230, .1); --stroke-strong: rgba(255, 200, 230, .18);
+  --accent: #f472b6; --accent-2: #fb923c; --accent-grad: linear-gradient(135deg, #fb923c 0%, #f472b6 50%, #a855f7 100%);
+  --blob-1: rgba(244, 114, 182, .22); --blob-2: rgba(251, 146, 60, .16); --blob-3: rgba(168, 85, 247, .2);
+  --text-2: #c3a9bd; --text-3: #8a7086; --primary-bg: #fce7f3; --primary-text: #2a0a1f;
+}
+:root[data-palette='minuit'] {
+  --bg: #000000; --bg-elev: #0a0a0d; --glass: rgba(255, 255, 255, .04); --glass-strong: rgba(8, 8, 12, .72); --modal-bg: rgba(12, 12, 18, .95); --glass-solid: #0e0e14;
+  --glass-hover: rgba(255, 255, 255, .07); --chip: rgba(255, 255, 255, .06); --stroke: rgba(255, 255, 255, .08); --stroke-strong: rgba(255, 255, 255, .15);
+  --accent: #818cf8; --accent-2: #38bdf8; --accent-grad: linear-gradient(135deg, #38bdf8 0%, #818cf8 55%, #c084fc 100%);
+  --blob-1: rgba(99, 102, 241, .14); --blob-2: rgba(192, 132, 252, .1); --blob-3: rgba(56, 189, 248, .08);
+}
+:root[data-palette='rose'] {
+  --bg: #fdf2f5; --bg-elev: #ffffff; --glass-strong: rgba(255, 255, 255, .7); --modal-bg: rgba(255, 255, 255, .94);
+  --accent: #e11d48; --accent-2: #fb7185; --accent-grad: linear-gradient(135deg, #fb7185 0%, #e11d48 50%, #be185d 100%);
+  --chip: rgba(159, 18, 57, .06); --stroke: rgba(136, 19, 55, .08); --stroke-strong: rgba(136, 19, 55, .15);
+  --blob-1: rgba(251, 113, 133, .24); --blob-2: rgba(244, 63, 94, .14); --blob-3: rgba(253, 164, 175, .2);
+  --text-2: #6b4a54; --primary-bg: #4c0519;
+}
+:root[data-palette='ciel'] {
+  --bg: #eef6fd; --bg-elev: #ffffff; --glass-strong: rgba(255, 255, 255, .7); --modal-bg: rgba(255, 255, 255, .94);
+  --accent: #0284c7; --accent-2: #6366f1; --accent-grad: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #6366f1 100%);
+  --chip: rgba(7, 89, 133, .06); --stroke: rgba(12, 74, 110, .08); --stroke-strong: rgba(12, 74, 110, .15);
+  --blob-1: rgba(56, 189, 248, .24); --blob-2: rgba(99, 102, 241, .14); --blob-3: rgba(125, 211, 252, .2);
+  --text-2: #4a6075; --primary-bg: #082f49;
+}
+:root[data-palette='sable'] {
+  --bg: #f7f3ea; --bg-elev: #ffffff; --glass-strong: rgba(255, 255, 255, .7); --modal-bg: rgba(255, 255, 255, .94);
+  --accent: #b45309; --accent-2: #ca8a04; --accent-grad: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+  --chip: rgba(120, 53, 15, .06); --stroke: rgba(120, 53, 15, .08); --stroke-strong: rgba(120, 53, 15, .15);
+  --blob-1: rgba(245, 158, 11, .22); --blob-2: rgba(202, 138, 4, .14); --blob-3: rgba(253, 224, 71, .18);
+  --text-2: #6b5f4a; --primary-bg: #451a03;
+}
+:root[data-palette='graphite'] {
+  --bg: #121214; --bg-elev: #1a1a1e; --glass: rgba(255, 255, 255, .045); --glass-strong: rgba(22, 22, 26, .68); --modal-bg: rgba(24, 24, 28, .94); --glass-solid: #1e1e23;
+  --glass-hover: rgba(255, 255, 255, .08); --chip: rgba(255, 255, 255, .07); --stroke: rgba(255, 255, 255, .09); --stroke-strong: rgba(255, 255, 255, .16);
+  --accent: #64748b; --accent-2: #94a3b8; --accent-grad: linear-gradient(135deg, #94a3b8 0%, #64748b 50%, #475569 100%);
+  --blob-1: rgba(148, 163, 184, .14); --blob-2: rgba(100, 116, 139, .12); --blob-3: rgba(71, 85, 105, .14);
+  --text-2: #b4b4bf; --text-3: #7a7a88; --primary-bg: #f4f4f5; --primary-text: #18181b;
+}
+:root[data-palette='amethyste'] {
+  --bg: #130b1f; --bg-elev: #1b1030; --glass: rgba(216, 180, 254, .05); --glass-strong: rgba(26, 15, 44, .66); --modal-bg: rgba(27, 16, 46, .93); --glass-solid: #21143a;
+  --glass-hover: rgba(216, 180, 254, .09); --chip: rgba(216, 180, 254, .08); --stroke: rgba(216, 180, 254, .1); --stroke-strong: rgba(216, 180, 254, .18);
+  --accent: #a855f7; --accent-2: #e879f9; --accent-grad: linear-gradient(135deg, #e879f9 0%, #a855f7 50%, #6366f1 100%);
+  --blob-1: rgba(168, 85, 247, .24); --blob-2: rgba(232, 121, 249, .14); --blob-3: rgba(99, 102, 241, .18);
+  --text-2: #b8a6d3; --text-3: #7f6ea0; --primary-bg: #f3e8ff; --primary-text: #2e1065;
+}
+:root[data-palette='cafe'] {
+  --bg: #140e0a; --bg-elev: #1c1410; --glass: rgba(253, 230, 200, .05); --glass-strong: rgba(28, 20, 15, .66); --modal-bg: rgba(30, 21, 16, .93); --glass-solid: #241912;
+  --glass-hover: rgba(253, 230, 200, .085); --chip: rgba(253, 230, 200, .075); --stroke: rgba(253, 230, 200, .1); --stroke-strong: rgba(253, 230, 200, .18);
+  --accent: #d97706; --accent-2: #fbbf24; --accent-grad: linear-gradient(135deg, #fbbf24 0%, #d97706 50%, #b45309 100%);
+  --blob-1: rgba(217, 119, 6, .2); --blob-2: rgba(251, 191, 36, .12); --blob-3: rgba(180, 83, 9, .16);
+  --text-2: #c4ad98; --text-3: #8b7563; --primary-bg: #fef3c7; --primary-text: #2a1405;
+}
+:root[data-palette] ::selection { background: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* Réglages : nuancier des palettes */
+.palettes { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+.palette-pick { display: flex; flex-direction: column; gap: 8px; padding: 8px; border-radius: 16px; border: 2px solid var(--stroke); background: transparent; color: var(--text); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; text-align: left; transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), border-color .2s; }
+.palette-pick:hover { transform: translateY(-2px); }
+.palette-pick.on { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.palette-swatch { height: 54px; border-radius: 10px; position: relative; overflow: hidden; border: 1px solid rgba(0, 0, 0, .08); }
+.palette-swatch i { position: absolute; right: 8px; bottom: 8px; width: 22px; height: 22px; border-radius: 50%; box-shadow: 0 4px 10px -3px rgba(0, 0, 0, .4); }
+.palette-swatch b { position: absolute; left: 8px; top: 8px; width: 46%; height: 8px; border-radius: 4px; background: rgba(127, 127, 127, .35); }
+.palette-swatch b + b { top: 22px; width: 30%; }
+.palette-mode { font-size: 11px; font-weight: 600; color: var(--text-3); }
+
+/* ---------- Police de l'interface (data-ui-font sur <html>) ---------- */
+:root[data-ui-font='lisible'] { --font: 'Atkinson Hyperlegible', 'Segoe UI', sans-serif; --font-display: 'Atkinson Hyperlegible', 'Segoe UI', sans-serif; }
+:root[data-ui-font='arrondie'] { --font: 'Shantell Sans', 'Segoe UI', sans-serif; --font-display: 'Shantell Sans', 'Segoe UI', sans-serif; }
+:root[data-ui-font='ecoliere'] { --font: 'Comic Neue', 'Segoe UI', sans-serif; --font-display: 'Comic Neue', 'Segoe UI', sans-serif; }
+:root[data-ui-font='classique'] { --font: Georgia, 'Times New Roman', serif; --font-display: Georgia, 'Times New Roman', serif; }
